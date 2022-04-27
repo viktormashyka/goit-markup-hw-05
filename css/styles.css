@@ -47,6 +47,7 @@ img {
   --fourth-color: #2196f3;
   --background-color: #2f303a;
   --hover-color: #2196f3;
+  --transition-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section {
@@ -140,7 +141,7 @@ img {
 
 .header-item > a {
   color: var(--main-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-main);
 }
 
 .header-item > a:hover,
@@ -174,7 +175,7 @@ img {
   color: var(--second-color);
   display: flex;
   align-items: baseline;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-main);
 }
 
 .header-contact:hover,
@@ -232,8 +233,7 @@ img {
   border: none;
   margin: 0 auto;
   display: block;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-main), background-color var(--transition-main);
 }
 
 .main-order-button:hover,
@@ -241,62 +241,6 @@ img {
   color: var(--main-color);
   background-color: #f5f4fa;
 }
-
-/* .backdrop {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-
-  background: rgba(0, 0, 0, 0.2);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.modal {
-  position: absolute;
-  width: 528px;
-  height: 581px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: end;
-
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.close-black {
-  color: #000000;
-  width: 18px;
-  height: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-close-button {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  padding: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 8px;
-} */
 
 /* -----------------------------MAIN-BENEFITS---------------------------- */
 
@@ -478,12 +422,12 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-main);
 }
 
 .icon-social {
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-main);
 }
 
 .main-team-social-item-link:hover,
@@ -527,12 +471,12 @@ img {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--transition-main);
 }
 
 .icon-client {
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-main);
 }
 
 .main-clients-link:hover,
@@ -576,8 +520,7 @@ img {
   border-color: #f5f4fa;
   display: block;
   padding: 6px 22px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-main), background-color var(--transition-main);
 }
 
 .main-portfolio-button:hover,
@@ -644,11 +587,13 @@ justify-content: space-between;
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition-main);
 }
 
 .portfolio-text-border {
-  border: 0 1px 1px 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
   padding: 20px 24px;
 }
 
@@ -724,7 +669,7 @@ justify-content: space-between;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-main);
 }
 
 .footer-contact:hover,
@@ -767,12 +712,12 @@ justify-content: space-between;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-main);
 }
 
 .footer-icon-social {
   fill: #ffffff;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-main);
 }
 
 .footer-social-item-link:hover,
@@ -796,56 +741,58 @@ justify-content: space-between;
   opacity: 1;
 
   background: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--transition-main);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
-.backdrop.is-hidden.modal {
-  transform: translate(-50%, -50%) scale(0.9);
+.backdrop.is-hidden .modal {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translate(100%, 100%) scale(0.5);
 }
 
 .modal {
   position: absolute;
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: end;
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transition 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  transition: background-color var(--transition-main), box-shadow var(--transition-main),
+    opacity var(--transition-main), transform var(--transition-main);
 }
 
 .close-black {
   color: #000000;
   width: 18px;
   height: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .modal-close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   width: 30px;
   height: 30px;
+
   padding: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 8px;
 }
