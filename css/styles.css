@@ -564,7 +564,8 @@ justify-content: space-between;
   overflow: hidden;
 }
 
-.main-portfolio-image-box:hover .main-portfolio-image-text {
+.main-portfolio-project-link:hover .main-portfolio-image-text,
+.main-portfolio-project-link:focus .main-portfolio-image-text {
   transform: translateY(0);
 }
 
